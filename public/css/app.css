@@ -17542,6 +17542,40 @@ label.panel-block:hover {
   background: rgba(227, 52, 47, 0.05);
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 103%;
+  z-index: 1000;
+  background-color: white;
+  min-width: 200px;
+  text-align: left;
+  -webkit-box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+          box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
+}
+
+.dropdown.is-aligned-right .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.dropdown.is-open .dropdown-menu {
+  display: block;
+}
+
+.navbar {
+  height: 4.5rem;
+}
+
+.navbar-item img {
+  max-height: 2.5rem;
+}
+
 .m-t-5 {
   margin-top: 5px;
 }

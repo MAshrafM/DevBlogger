@@ -1,3 +1,14 @@
+// Text Overrides
+.is-muted{
+  color: $grey-light !important;
+}
+
+a.is-muted:hover{
+  color: $grey !important;
+}
+
+
+// Dropdown Overrides
 .dropdown{
   position: relative;
   
@@ -23,10 +34,38 @@
     display: block;
   }
 }
-
+// Navbar
 .navbar{
   height: 4.5rem;
 }
+
 .navbar-item img{
   max-height: 2.5rem;
+}
+
+a.navbar-item {
+  background-color: transparent;
+  border: none;
+  color: $text-light;
+  
+  &:hover, &.is-tab:hover{
+    color: #00d1b2;
+    border-bottom-color: #00d1b2;
+    border-top-color: transparent;
+  }
+  
+  &.is-active {
+    color: #00d1b2;
+    border-bottom: 3px solid #00d1b2;
+    padding-bottom: calc(0.75rem - 1px);
+  }
+  
+  &.is-tab{
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    padding-bottom: calc(0.75rem - 1px);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: calc(0.75rem - 1px);
+  }
 }

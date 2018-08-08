@@ -43,6 +43,9 @@ a.is-muted:hover{
   max-height: 2.5rem;
 }
 
+.navbar-item.is-tab:hover{
+  border-bottom-color: #00d1b2;
+}
 a.navbar-item {
   background-color: transparent;
   border: none;
@@ -67,5 +70,16 @@ a.navbar-item {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: calc(0.75rem - 1px);
+  }
+}
+
+.navbar-link{
+  &:hover{
+    color: #00d1b2;
+    background-color: transparent;
+    border-bottom-color: #00d1b2;
+  }
+  &::after{
+    border-color: #00d1b2;
   }
 }

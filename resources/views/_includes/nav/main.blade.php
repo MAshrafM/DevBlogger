@@ -34,7 +34,7 @@
             <div class="dropdown-menu navbar-dropdown">
               <a class="navbar-item" href=""><span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span> Profile</a>
               <a class="navbar-item" href=""><span class="icon"><i class="fa fa-fw m-r-10 fa-bell"></i></span> Notification</a>
-              <a class="navbar-item" href=""><span class="icon"><i class="fa fa-fw m-r-10 fa-cog"></i></span> Settings</a>
+              <a class="navbar-item" href="{{route('manage.dashboard')}}"><span class="icon"><i class="fa fa-fw m-r-10 fa-cog"></i></span> Settings</a>
               <hr class="navbar-divider">
               <a class="navbar-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span> Logout</a>
               @include('_includes.forms.logout')

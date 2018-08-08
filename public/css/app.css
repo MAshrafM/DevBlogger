@@ -17542,6 +17542,11 @@ label.panel-block:hover {
   background: rgba(227, 52, 47, 0.05);
 }
 
+html {
+  font-weight: 500;
+  background-color: whitesmoke;
+}
+
 .is-muted {
   color: #b5b5b5 !important;
 }
@@ -17624,6 +17629,17 @@ a.navbar-item.is-tab {
 
 .navbar-link::after {
   border-color: #00d1b2;
+}
+
+.pagination-link.is-current {
+  background-color: #00d1b2;
+  border-color: #00d1b2;
+}
+
+.pagination-link,
+.pagination-next,
+.pagination-previous {
+  color: #00d1b2;
 }
 
 .m-t-5 {
@@ -18016,5 +18032,20 @@ a.navbar-item.is-tab {
   width: 200px;
   background-color: white;
   overflow-y: scroll;
+}
+
+.side-menu a:hover {
+  color: #00d1b2;
+}
+
+.management-area {
+  position: absolute;
+  top: 4rem;
+  left: 200px;
+  right: 0;
+}
+
+.flex-container {
+  margin: 10px 25px;
 }
 

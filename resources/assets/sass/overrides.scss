@@ -1,3 +1,8 @@
+//body
+html{
+  font-weight: 500;
+  background-color: whitesmoke;
+}
 // Text Overrides
 .is-muted{
   color: $grey-light !important;
@@ -82,4 +87,13 @@ a.navbar-item {
   &::after{
     border-color: #00d1b2;
   }
+}
+
+//pagination
+.pagination-link.is-current {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+.pagination-link, .pagination-next, .pagination-previous{
+  color: $brand-primary;
 }

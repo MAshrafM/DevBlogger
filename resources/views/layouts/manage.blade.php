@@ -21,7 +21,7 @@
   @include('_includes.nav.main')
   @include('_includes.nav.manage')
   <div id="app">
-    <main class="py-4">
+    <main class="management-area py-4">
         @yield('content')
     </main>
   </div>

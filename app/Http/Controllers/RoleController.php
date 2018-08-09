@@ -70,7 +70,8 @@ class RoleController extends Controller
      */
     public function show($id)
     {
-        //
+      $role = Role::where('id', $id)->with('permissions')->first();
+      return view('manage.roles.show')->withRole($role);
     }
 
     /**

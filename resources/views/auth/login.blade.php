@@ -41,3 +41,14 @@
   </div>
 </div>
 @endsection
+
+@section('scripts')
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var app = new Vue({
+      el: '#app',
+      data: {}
+    });
+  });
+</script>
+@endsection

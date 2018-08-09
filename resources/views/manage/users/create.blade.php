@@ -8,35 +8,47 @@
       </div>
     </div>
     <hr class="m-t-10">
-    <div class="columns">
-      <div class="column">
-        <form action="{{route('users.store')}}" method="POST">
+
+    <form action="{{route('users.store')}}" method="POST">
         @csrf
-        <div class="field">
-          <label for="name" class="label">Name:</label>
-          <p class="control">
-            <input type="text" class="input" name="name" id="name">
-          </p>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <label for="name" class="label">Name:</label>
+            <p class="control">
+              <input type="text" class="input" name="name" id="name">
+            </p>
+          </div>
+          
+          <div class="field">
+            <label for="email" class="label">Email:</label>
+            <p class="control">
+              <input type="text" class="input" name="email" id="email">
+            </p>
+          </div>
+          
+          <div class="field">
+            <label for="password" class="label">Password:</label>
+            <p class="control">
+              <input type="text" class="input" name="password" id="password" v-if="!auto_password" placeholder="Manually give a password to this user">
+              <b-checkbox name="auto_generate" class="m-t-15" v-model="auto_password">Auto Generate Password</b-checkbox>
+            </p>
+          </div>
         </div>
-        
-        <div class="field">
-          <label for="email" class="label">Email:</label>
-          <p class="control">
-            <input type="text" class="input" name="email" id="email">
-          </p>
+        <div class="column">
+          <label for="roles" class="label">Roles:</label>
+          <input type="hidden" name="roles" :value="rolesSelected" />
+          
+          @foreach ($roles as $role)
+            <div class="field">
+              <b-checkbox v-model="rolesSelected" native-value="{{$role->id}}">{{$role->display_name}}</b-checkbox>
+            </div>
+          @endforeach
         </div>
-        
-        <div class="field">
-          <label for="password" class="label">Password:</label>
-          <p class="control">
-            <input type="text" class="input" name="password" id="password" v-if="!auto_password" placeholder="Manually give a password to this user">
-            <b-checkbox name="auto_generate" class="m-t-15" v-model="auto_password">Auto Generate Password</b-checkbox>
-          </p>
-        </div>
-        <button class="button is-success">Create User</button>
-        </form>
       </div>
-    </div>
+      <hr class="m-t-50">
+      <button class="button is-success is-pulled-right">Create User</button>
+    </form>
   </div>
 @endsection
 
@@ -46,7 +58,8 @@
       var app = new Vue({
         el: '#app',
         data: {
-          auto_password: true
+          auto_password: true,
+          rolesSelected: {!! old('roles') ? old('roles') : '[]' !!}
         }
       });
     });

@@ -89,7 +89,8 @@ class PermissionController extends Controller
      */
     public function show($id)
     {
-        //
+      $permission = Permission::findOrFail($id);
+      return view('manage.permissions.show')->withPermission($permission);
     }
 
     /**

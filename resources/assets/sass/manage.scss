@@ -1,9 +1,22 @@
-.side-menu{
+#admin-side-menu{
   position: fixed;
-  height: 100vh;
+  top: 4.5rem;
+  left: -200px;
+  bottom: 0;
   width: 200px;
   background-color: white;
   overflow-y: scroll;
+  z-index: 100;
+  transition: left 0.3s ease-in-out;
+  
+  &.is-active {
+    left: 0;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  @include desktop {
+    left: 0;
+  }
   
   a{
     &:hover{
@@ -32,4 +45,16 @@
 .menu-list li ul {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.navbar-burger {
+  border: none;
+}
+
+#admin-slide-button {
+  transition: 0.3s;
+  &.is-active {
+    transition: 0.3s;
+    transform: rotateY(180deg);
+  }
 }

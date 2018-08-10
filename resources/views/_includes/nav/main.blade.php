@@ -5,7 +5,15 @@
         <img src="{{ asset('images/logo.png')}}" alt="logo" />
       </a>
       
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      @if (Request::segment(1) == "manage")
+        <a class="navbar-item is-hidden-desktop" id="admin-slide-button">
+          <span class="icon">
+            <i class="fa fa-arrow-circle-right"></i>
+          </span>
+        </a>
+      @endif
+      
+      <a role="button" class="button navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>

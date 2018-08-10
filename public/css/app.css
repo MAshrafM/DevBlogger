@@ -18038,15 +18038,32 @@ a.navbar-item.is-tab {
   width: 100%;
 }
 
-.side-menu {
+#admin-side-menu {
   position: fixed;
-  height: 100vh;
+  top: 4.5rem;
+  left: -200px;
+  bottom: 0;
   width: 200px;
   background-color: white;
   overflow-y: scroll;
+  z-index: 100;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
 }
 
-.side-menu a:hover {
+#admin-side-menu.is-active {
+  left: 0;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 1088px) {
+  #admin-side-menu {
+    left: 0;
+  }
+}
+
+#admin-side-menu a:hover {
   color: #00d1b2;
 }
 
@@ -18071,5 +18088,21 @@ a.navbar-item.is-tab {
 .menu-list li ul {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.navbar-burger {
+  border: none;
+}
+
+#admin-slide-button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#admin-slide-button.is-active {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 

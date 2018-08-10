@@ -97,3 +97,12 @@ a.navbar-item {
 .pagination-link, .pagination-next, .pagination-previous{
   color: $brand-primary;
 }
+
+// menus
+.menu-list a.is-active{
+  background-color: $brand-primary;
+  
+  &:hover{
+    color: #111;;
+  }
+}

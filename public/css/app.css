@@ -17642,6 +17642,14 @@ a.navbar-item.is-tab {
   color: #00d1b2;
 }
 
+.menu-list a.is-active {
+  background-color: #00d1b2;
+}
+
+.menu-list a.is-active:hover {
+  color: #111;
+}
+
 .m-t-5 {
   margin-top: 5px;
 }
@@ -18026,6 +18034,10 @@ a.navbar-item.is-tab {
   padding-right: 100px;
 }
 
+.is-fullwidth {
+  width: 100%;
+}
+
 .side-menu {
   position: fixed;
   height: 100vh;
@@ -18047,5 +18059,17 @@ a.navbar-item.is-tab {
 
 .flex-container {
   margin: 10px 25px;
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-list li ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 

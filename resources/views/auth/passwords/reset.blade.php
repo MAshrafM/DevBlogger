@@ -13,7 +13,7 @@
       <div class="card-content">
         <h1 class="title"> Reset Your Password </h1>
         
-        <form action="{{ route('register') }}" method="POST" role="form">
+        <form action="{{ route('password.request') }}" method="POST" role="form">
           @csrf
           <input type="hidden" name="token" value="{{ $token }}">
           <div class="field">

@@ -123,3 +123,12 @@
     }
   }
 }
+
+.slug-widget {
+  .subdirectory-url, .root-url {
+    display: none;
+    @media (min-width: 769px) {
+      display: inline-block;
+    }
+  }
+}

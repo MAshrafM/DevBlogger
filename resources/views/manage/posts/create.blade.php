@@ -13,7 +13,7 @@
     <form action="{{route('posts.store')}}" method="post">
     @csrf
       <div class="columns">
-        <div class="column is-three-quarters-desktop">
+        <div class="column is-three-quarters-desktop is-three-quarters-tablet">
           <b-field>
             <b-input type="text" placeholder="Post Title" size="is-large"  v-model="title">
             </b-input>
